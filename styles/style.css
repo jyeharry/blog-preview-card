@@ -3,6 +3,10 @@
   --white: hsl(0, 0%, 100%);
   --gray-500: hsl(0, 0%, 42%);
   --gray-950: hsl(0, 0%, 7%);
+  --space-sm: 0.25rem;
+  --space-md: 0.5rem;
+  --space-lg: 0.75rem;
+  --space-xl: 1.5rem;
 }
 
 @font-face {
@@ -17,4 +21,105 @@
   src: url('../assets/fonts/Figtree-Italic-VariableFont_wght.ttf') format('truetype');
   font-weight: 100 900;
   font-style: italic;
+}
+
+* {
+  font-family: 'Figtree', sans-serif;
+  color: var(--gray-950);
+}
+
+.txt-heading {
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.txt-body {
+  line-height: 150%;
+  color: var(--gray-500);
+  letter-spacing: 0;
+}
+
+.txt-metadata, .txt-metadata--bold {
+  letter-spacing: 0;
+  font-size: 14px;
+  line-height: 150%;
+} 
+
+.txt-metadata--bold {
+  font-weight: 700;
+} 
+
+body {
+  background-color: var(--yellow);
+}
+
+.card__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card__link {
+  text-decoration: none;
+  position: relative;
+  transition: top 0.5s, left 0.5s;
+  top: 0px;
+  left: 0px;
+
+  &:hover {
+    top: -8px;
+    left: -8px;
+  }
+
+  &:hover .card__title {
+    color: var(--yellow);
+  }
+
+  &:hover .card {
+    box-shadow: 16px 16px 0 black;
+  }
+}
+
+.card {
+  max-width: 384px;
+  border-radius: 1.25rem;
+  display: flex;
+  gap: var(--space-xl);
+  flex-direction: column;
+  padding: var(--space-xl);
+  border: 1px solid var(--gray-950);
+  background-color: var(--white);
+  box-shadow: 8px 8px 0 black;
+  transition: box-shadow 0.5s;
+}
+
+.card__img {
+  border-radius: 0.625rem;
+}
+
+.card__main-content, .card__header {
+  display: flex;
+  gap: var(--space-lg);
+  flex-direction: column;
+}
+
+.card__title {
+  transition: color 0.5s;
+}
+
+.card__tag {
+  width: fit-content;
+  background-color: var(--yellow);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--space-sm);
+}
+
+.card__author {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-lg);
+  align-items: center;
 }
