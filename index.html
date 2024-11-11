@@ -18,7 +18,7 @@
   </head>
   <body>
     <main class="card__container">
-      <a href='#' class="card__link">
+      <a href='javascript:void(0)' class="card__link" aria-labelledby="card__title">
         <article class="card">
           <img
             class="card__img"
@@ -31,14 +31,14 @@
             <header class="card__header">
               <span class="card__tag txt-metadata--bold">Learning</span>
               <time class="txt-metadata">Published 21 Dec 2023</time>
-              <h1 class="card__title txt-heading">HTML & CSS foundations</h1>
+              <h1 id="card__title" class="card__title txt-heading">HTML & CSS foundations</h1>
             </header>
             <p class="txt-body">
               These languages are the backbone of every website, defining
               structure, content, and presentation.
             </p>
           </div>
-          <footer class="card__author">
+          <footer role='contentinfo' class="card__author">
             <img
               src="assets/images/image-avatar.webp"
               alt="Author profile photo"
