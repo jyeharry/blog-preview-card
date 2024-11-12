@@ -54,6 +54,10 @@ I learnt how to declare variable fonts in CSS:
 
 I also took accessibility into consideration by using more semantic html tags and attributes such as the `aria-labelledby` attribute on the surrounding `<a>` around the card.
 
+I was about to submit my solution then I realised the challenge page mentions that the font size is different on the mobile design and that I should find a way to reduce the font size without using media queries. This is where I first used `clamp()`!
+
+To come up with the dynamic value (the second value in `clamp()`), I divided the mobile font size by the mobile screen width. So for example, the body text had to be 14px on mobile and the mobile screen size is 375px. So 14 / 375 = 0.0373. So the dynamic value I used in `clamp()` was 3.75vw. I'm not sure if this is the best way to come up with the value but it worked well enough for all the different text presets in this challenge.
+
 ### Useful resources
 
 - [developer.mozilla.org/](https://developer.mozilla.org/) - I mainly just used various pages on MDN.
